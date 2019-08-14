@@ -4,6 +4,8 @@ import accessmodifierspackage.accessclass;
 import constructorpackage.someoneclass;
 import domainpackage.*;
 import primitivereferencetypes.typeofReference;
+import staticpackage.staticsampleclass;
+import enumpackage.enumanimals;
 
 public class mainclass {
 	//Access Modifiers
@@ -62,6 +64,7 @@ public class mainclass {
 		*/
 		
 		//Access Modifiers
+		/*
 		//Farklý Paket içiden eriþim:
 		accessclass accessmodifiersexample = new accessclass();
 		//String test1_1 = accessmodifiersexample.Value1; //Private
@@ -81,7 +84,40 @@ public class mainclass {
 		String test3_2 = Value2; //Protected
 		String test3_3 = Value3; //Public
 		String test3_4 = Value4; //default
+		*/
 		
+		//Static Classes
+		/*
+		System.out.println(String.format("Static sýnýf sayi deðeri: %d 'dir", staticsampleclass.Sayi));
+		staticsampleclass sampleclass1 = new staticsampleclass("Altay", "Gençaslan");
+		staticsampleclass sampleclass2 = new staticsampleclass("Nergiz", "Gençaslan");
+		staticsampleclass sampleclass3 = new staticsampleclass("Ahmet Deniz", "Gençaslan");
+		System.out.println(String.format("Static sýnýf sayi deðeri: %d 'dir", staticsampleclass.Sayi));
+		*/
+
+		//Enums
+		/*
+		//Enumlarýn deðeri
+		System.out.println(enumanimals.AT);
+		System.out.println(enumanimals.HOROZ);
+		System.out.println(enumanimals.KEDI);
+		System.out.println(enumanimals.KOPEK);
+		System.out.println(enumanimals.KOYUN);
+		
+		//Enumlarýn içinde oluþturulan deðiþken bilgisi
+		System.out.println(enumanimals.AT.adet);
+		System.out.println(enumanimals.HOROZ.adet);
+		System.out.println(enumanimals.KEDI.adet);
+		System.out.println(enumanimals.KOPEK.adet);
+		System.out.println(enumanimals.KOYUN.adet);
+		
+		//Enumlarýn indis bilgisi
+		System.out.println(enumanimals.AT.ordinal());
+		System.out.println(enumanimals.HOROZ.ordinal());
+		System.out.println(enumanimals.KEDI.ordinal());
+		System.out.println(enumanimals.KOPEK.ordinal());
+		System.out.println(enumanimals.KOYUN.ordinal());
+		*/		
 	}
 	
 	private static void KendisiyleCarp(int a)
