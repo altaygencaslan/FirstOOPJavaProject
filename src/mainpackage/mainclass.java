@@ -1,11 +1,16 @@
 package mainpackage;
 
+import constructorpackage.someoneclass;
 import domainpackage.*;
+import primitivereferencetypes.typeofReference;
 
 public class mainclass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		// OOP and Class
+		/*
 		insan insan1 = new insan();
 		insan1.boy = 1.78;
 		insan1.cinsiyet = "Erkek";
@@ -20,6 +25,39 @@ public class mainclass {
 		
 		arac1.gazaBas();
 		arac1.freneBas();
+		*/
+		
+		//Value Type - Reference Type
+		/*
+		//Deðer tipler baþka brmetoda gönderildiklerinde aslýnda bir kopyalarý gönderilmiþ olur.
+		int a = 5;
+		System.out.println(String.format("Eski Deðer: %d", a));
+		KendisiyleCarp(a);
+		System.out.println(String.format("Yeni Deðer: %d", a));
+		
+		//Referans tipler baþka bir metoda gönderildiklerinde bellekteki adresiyle kendisi gönderilmiþ olur.
+		typeofReference ornektip = new typeofReference();
+		ornektip.val = 10;
+		System.out.println(String.format("Eski Deðer: %d", ornektip.val));
+		KendisiyleCarp(ornektip);
+		System.out.println(String.format("Yeni Deðer: %d", ornektip.val));
+		*/
+		
+		//Constructor'lar
+		someoneclass orneksinif = new someoneclass(1987);
+		System.out.println(String.format("Örnek sýnýfa ait Deðer1: %d ve Deðer2: %d", orneksinif.deger1, orneksinif.deger2));
 	}
+	
+	private static void KendisiyleCarp(int a)
+	{
+		a = a * a;
+	}
+	
+	private static void KendisiyleCarp(typeofReference type)
+	{
+		type.val = type.val * type.val;
+	}
+	
+	
 
 }
