@@ -1,6 +1,10 @@
 package mainpackage;
 
+import java.lang.annotation.Annotation;
+
 import accessmodifierspackage.accessclass;
+import annotationpackage.customannotation;
+import annotationpackage.customclass;
 import constructorpackage.someoneclass;
 import domainpackage.*;
 import primitivereferencetypes.typeofReference;
@@ -118,6 +122,34 @@ public class mainclass {
 		System.out.println(enumanimals.KOPEK.ordinal());
 		System.out.println(enumanimals.KOYUN.ordinal());
 		*/		
+		
+		//Custom Annotation
+		customclass customsinif = new customclass();
+		customsinif.Isim = "Altay";
+		customsinif.Yil = 1987;
+		
+		//Sýnýfýn sahip olduðunu bildiðimiz spesifik annotation:
+		customannotation customA = customsinif.getClass().getAnnotation(customannotation.class);
+		String customAd = customA.Ad();
+		int customAdet = customA.Adet();
+		System.out.println("customAd: " + customAd);
+		System.out.println("customAdet: " + customAdet);
+		
+		//Sýnýfýn sahip olduðu tüm annotation'lar:
+		Annotation[] listofAnnotation = customsinif.getClass().getAnnotations();
+		System.out.println("Count of Annotation(s) " + listofAnnotation.length);
+		for (Annotation annotation: listofAnnotation)
+		{			
+			if (annotation instanceof customannotation)
+			{
+				customannotation cannotation = (customannotation)annotation;
+				
+				customAd = cannotation.Ad();
+				customAdet = cannotation.Adet();
+				System.out.println("customAd: " + customAd);
+				System.out.println("customAdet: " + customAdet);
+			}
+		}
 	}
 	
 	private static void KendisiyleCarp(int a)
