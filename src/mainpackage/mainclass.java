@@ -123,7 +123,7 @@ public class mainclass {
 		System.out.println(enumanimals.KOYUN.ordinal());
 		*/		
 		
-		//Custom Annotation
+		//Annotation & Custom Annotation
 		customclass customsinif = new customclass();
 		customsinif.Isim = "Altay";
 		customsinif.Yil = 1987;
@@ -150,6 +150,15 @@ public class mainclass {
 				System.out.println("customAdet: " + customAdet);
 			}
 		}
+
+		customclass customsinif2 = new customclass();
+		
+		
+		//Garbage Collactor v1
+		Runtime.getRuntime().gc();
+		
+		//Garbage Collactor v2
+		System.gc();
 	}
 	
 	private static void KendisiyleCarp(int a)
